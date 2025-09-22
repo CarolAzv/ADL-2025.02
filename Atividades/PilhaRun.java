@@ -1,5 +1,6 @@
-public class PilhaVP{
-	public static void main(String[] args) {		
+public class PilhaRun{
+	public static void main(String[] args) {
+		int[] PilhaArray = new int[100];
 		Integer[] b = new Integer[1];		
 		PilhaArray pp = new PilhaArray(1,0);
 		System.out.println("inserindo");
