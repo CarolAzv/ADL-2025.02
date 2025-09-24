@@ -12,8 +12,33 @@ public class PilhaArray implements Pilha {
             FC=0;
         a=new Object[capacidade];
     }
-    //PUSH
-    public void push(Object o){
+    
+    //PUSH VERMELHO
+    public void pushvermelho(Object o){
+        if(t>=capacidade-1){
+        if(FC==0)
+            capacidade*=2;
+        else
+            capacidade+=FC;
+        Object b[]=new Object[capacidade];
+        for(int f=0;f<a.length;f++)
+            b[f]=a[f];
+        a=b;
+        }
+        a[++t]=o;
+    }
+
+    //POP VERMELHO
+    public Object popvermelho()throws PilhaVaziaExcecao {
+        if(isEmpty())
+            throw new PilhaVaziaExcecao("A Pilha está vazia");
+        Object r=a[t--];
+        return r;
+    }
+
+    
+    //PUSH PRETO
+    public void pushpreto(Object o){
         if(t>=capacidade-1){
         if(FC==0)
             capacidade*=2;
@@ -27,9 +52,8 @@ public class PilhaArray implements Pilha {
         a[++t]=o;
     }
     
-
-    //POP
-    public Object pop()throws PilhaVaziaExcecao {
+    //POP PRETO
+    public Object poppreto()throws PilhaVaziaExcecao {
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
         Object r=a[t--];
