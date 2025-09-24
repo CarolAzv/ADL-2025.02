@@ -1,6 +1,8 @@
 
 public class PilhaArray implements Pilha {
     private int capacidade;
+    private int sizever;
+    private int sizepreto;
     private Object[] a;
     private int t;
     private int FC;
