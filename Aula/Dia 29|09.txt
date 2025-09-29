@@ -8,3 +8,5 @@ Fila
   Array sircular aplicada a Fila
   tamanho(): (N-i+f) % N
   Vazio(): i=f
+
+Lista encadeada
