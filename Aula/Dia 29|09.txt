@@ -3,4 +3,6 @@ Fila
   i é o indice do primeiro elemento
   f é o indice após o ultimo elemento (f é vazio)
 
-Array sircular aplicada a Fila
+  Array sircular aplicada a Fila
+  tamanho(): (N-i+f) % N
+  Vazio(): i=f
