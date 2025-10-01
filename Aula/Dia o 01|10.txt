@@ -7,7 +7,7 @@ Lista Encadeada
 push{
   no novo = new no();
   novo.setnext(t);
-  t = novo;
+  t = t.getNext();
 }
 
 pop{
