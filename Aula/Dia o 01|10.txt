@@ -1,0 +1,15 @@
+Lista Encadeada
+  *Sequencia de nó
+  *Cada nó armazena um elemento e uma ligação com o proximo nó
+  *Primeiro ele (do topo) é armazenado no primeiro nó
+  *Espaço usado é O(n) e cada operação roda em O(1)
+
+push{
+  no novo = new no();
+  novo.setnext(t);
+  t = t.getNext();
+}
+
+pop{
+  t = t getNext();
+}

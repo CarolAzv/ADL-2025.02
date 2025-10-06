@@ -1,0 +1,12 @@
+Fila
+  dequeuer():
+    0 = Q[1]
+    i = (i+1)%N
+  i é o indice do primeiro elemento
+  f é o indice após o ultimo elemento (f é vazio)
+
+  Array sircular aplicada a Fila
+  tamanho(): (N-i+f) % N
+  Vazio(): i=f
+
+Lista encadeada
