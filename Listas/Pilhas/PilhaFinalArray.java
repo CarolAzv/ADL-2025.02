@@ -1,41 +1,13 @@
-public class PilhaFinalArray {
-    private int[] array;
-    private int topo; // aponta para o próximo espaço livre (de trás para frente)
-
-    public PilhaFinalArray(int capacidade) {
-        array = new int[capacidade];
-        topo = capacidade; // começa no final do array
+public void pushvermelho(Object o){
+    if(t==(a.length)-1 || t==ultimopre-1){
+        if(FC==0)
+            capacidade*=2;
+        else
+            capacidade+=FC;
+        Object b[]=new Object[capacidade];
+        for(int f=0;f<a.length;f++)
+            b[f]=a[f];
+        a=b;
     }
-
-    public boolean estaVazia() {
-        return topo == array.length;
-    }
-
-    public boolean estaCheia() {
-        return topo == 0;
-    }
-
-    public void push(int valor) throws Exception {
-        if (estaCheia()) {
-            throw new Exception("Pilha cheia!");
-        }
-        topo--;
-        array[topo] = valor;
-    }
-
-    public int pop() throws Exception {
-        if (estaVazia()) {
-            throw new Exception("Pilha vazia!");
-        }
-        int valor = array[topo];
-        topo++;
-        return valor;
-    }
-
-    public int peek() throws Exception {
-        if (estaVazia()) {
-            throw new Exception("Pilha vazia!");
-        }
-        return array[topo];
-    }
+    a[++t]=o;
 }

@@ -16,7 +16,7 @@ public class PilhaArray implements Pilha {
 
     //PUSH VERMELHO
     public void pushvermelho(Object o){
-        if(t==capacidade-1){
+        if(t==(a.length)-1 || t==ultimopre-1){
             if(FC==0)
                 capacidade*=2;
             else
@@ -27,12 +27,22 @@ public class PilhaArray implements Pilha {
             a=b;
         }
         a[++t]=o;
+
+        int ocupados = (a.length-ultimopre)+(t+1);
+        if(ocupados == a.length/3 && capacidade > 1){
+            capacidade/=2;
+            Object b[]=new Object[capacidade];
+            for(int f=0;f<capacidade && f<a.length;f++)
+                b[f]=a[f];
+            a=b;
+        }
     }
 
     //POP VERMELHO
     public Object popvermelho()throws PilhaVaziaExcecao {
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
+
         Object r=a[t--];
         return r;
     }
@@ -40,7 +50,7 @@ public class PilhaArray implements Pilha {
     
     //PUSH PRETO
     public void pushpreto(Object o){
-        if(ultimopre==0){
+        if(t==(a.length)-1 || t==ultimopre-1){
             if(FC==0)
                 capacidade*=2;
             else
@@ -50,14 +60,25 @@ public class PilhaArray implements Pilha {
                 b[f]=a[f];
             a=b;
         }
+        
         ultimopre--;
         a[ultimopre]=o;
+
+        int ocupados = (a.length-ultimopre)+(t+1);
+        if(ocupados == a.length/3 && capacidade > 1){
+            capacidade/=2;
+            Object b[]=new Object[capacidade];
+            for(int f=0;f<capacidade && f<a.length;f++)
+                b[f]=a[f];
+            a=b;
+        }
     }
 
     //POP PRETO
     public Object poppreto()throws PilhaVaziaExcecao {
         if(ultimopre == a.length)
             throw new PilhaVaziaExcecao("A Pilha está vazia");
+
         Object r=a[ultimopre++];
         return r;
     }
@@ -74,13 +95,23 @@ public class PilhaArray implements Pilha {
                 b[f]=a[f];
             a=b;
         }
+
         a[++t]=o;
+
+        if((a.length-ultimopre)+(a.length-t)==capacidade/3){
+            capacidade/=2;
+            Object b[]=new Object[capacidade];
+            for(int f=0;f<a.length;f++)
+                b[f]=a[f];
+            a=b;
+        }
     }
 
     //POP
     public Object pop()throws PilhaVaziaExcecao {
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
+
         Object r=a[t--];
         return r;
     }
