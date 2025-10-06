@@ -16,7 +16,7 @@ public class PilhaArray implements Pilha {
 
     //PUSH VERMELHO
     public void pushvermelho(Object o){
-        if(t>=capacidade-1){
+        if(t==capacidade-1){
             if(FC==0)
                 capacidade*=2;
             else
@@ -100,5 +100,15 @@ public class PilhaArray implements Pilha {
     //SIZE
     public int size(){
         return t+1;
+    }
+
+    public void mostrarPilha(){
+        if(isEmpty())
+            throw new PilhaVaziaExcecao("A Pilha está vazia");
+        System.out.print("Itens da pilha: ");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
     }
 }

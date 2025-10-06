@@ -2,7 +2,7 @@ public class PilhaRun{
 	public static void main(String[] args){	
 		PilhaArray pp = new PilhaArray(10,0);
 		System.out.println("inserindo vermelho");
-		for(int f=0;f<5;f++){
+		for(int f=0;f<10;f++){
 		  System.out.println(f);		  
 		  pp.pushvermelho(Integer.valueOf(f));
 		}
@@ -12,15 +12,11 @@ public class PilhaRun{
 		  pp.pushpreto(Integer.valueOf(f));
 		}
 
-		/*System.out.println("mostrando pilha");
-		for(int f=0;f<10;f++){
-			  System.out.print(f);
-			  System.out.println(" - "+pp.popvermelho());
-		}
-		*/
-
+		System.out.println("mostrando pilha");
+		pp.mostrarPilha();
+    	
 		System.out.println("retirando vermelho");
-		for(int f=0;f<5;f++){
+		for(int f=0;f<10;f++){
 			  System.out.print(f);
 			  System.out.println(" - "+pp.popvermelho());
 		}
