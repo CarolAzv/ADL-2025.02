@@ -3,11 +3,9 @@ public class PilhaArray implements Pilha {
     private Object[] a;
     private int t;
     private int FC;
-    private int ultimover;
     private int ultimopre;
-    public PilhaArray(int capacidade, int crescimento, int ultimover, int ultimopre){
-        ultimover = -1;
-        ultimopre = capacidade-1;
+    public PilhaArray(int capacidade, int crescimento){
+        ultimopre = capacidade;
         this.capacidade=capacidade;
         t=-1;
         FC=crescimento;
@@ -16,33 +14,9 @@ public class PilhaArray implements Pilha {
         a=new Object[capacidade];
     }
 
-    //PUSH
-    public void push(Object o){
-        if(t>=capacidade-1){
-        if(FC==0)
-            capacidade*=2;
-        else
-            capacidade+=FC;
-        Object b[]=new Object[capacidade];
-        for(int f=0;f<a.length;f++)
-            b[f]=a[f];
-        a=b;
-        }
-        a[++t]=o;
-    }
-    
-
-    //POP
-    public Object pop()throws PilhaVaziaExcecao {
-        if(isEmpty())
-            throw new PilhaVaziaExcecao("A Pilha está vazia");
-        Object r=a[t--];
-        return r;
-    }
-
     //PUSH VERMELHO
     public void pushvermelho(Object o){
-        if(ultimover>=capacidade-1){
+        if(t>=capacidade-1){
             if(FC==0)
                 capacidade*=2;
             else
@@ -52,20 +26,44 @@ public class PilhaArray implements Pilha {
                 b[f]=a[f];
             a=b;
         }
-        a[++ultimover]=o;
+        a[++t]=o;
     }
 
     //POP VERMELHO
     public Object popvermelho()throws PilhaVaziaExcecao {
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
-        Object r=a[ultimover--];
+        Object r=a[t--];
         return r;
     }
 
     
     //PUSH PRETO
     public void pushpreto(Object o){
+        if(ultimopre==0){
+            if(FC==0)
+                capacidade*=2;
+            else
+                capacidade+=FC;
+            Object b[]=new Object[capacidade];
+            for(int f=0;f<a.length;f++)
+                b[f]=a[f];
+            a=b;
+        }
+        ultimopre--;
+        a[ultimopre]=o;
+    }
+
+    //POP PRETO
+    public Object poppreto()throws PilhaVaziaExcecao {
+        if(ultimopre == a.length)
+            throw new PilhaVaziaExcecao("A Pilha está vazia");
+        Object r=a[ultimopre++];
+        return r;
+    }
+
+    //PUSH
+    public void push(Object o){
         if(t>=capacidade-1){
             if(FC==0)
                 capacidade*=2;
@@ -76,14 +74,14 @@ public class PilhaArray implements Pilha {
                 b[f]=a[f];
             a=b;
         }
-        a[--ultimopre]=o;
-    } 
-    
-    //POP PRETO
-    public Object poppreto()throws PilhaVaziaExcecao {
+        a[++t]=o;
+    }
+
+    //POP
+    public Object pop()throws PilhaVaziaExcecao {
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
-        Object r=a[ultimopre++];
+        Object r=a[t--];
         return r;
     }
 
