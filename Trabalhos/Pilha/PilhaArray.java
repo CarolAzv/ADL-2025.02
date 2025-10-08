@@ -1,4 +1,4 @@
-public class PilhaArray implements Pilha {
+public class PilhaArray implements Pilha{
     private int capacidade;
     private Object[] a;
     private int t;
@@ -39,7 +39,7 @@ public class PilhaArray implements Pilha {
     }
 
     //POP VERMELHO
-    public Object popvermelho()throws PilhaVaziaExcecao {
+    public Object popvermelho()throws PilhaVaziaExcecao{
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
 
@@ -75,7 +75,7 @@ public class PilhaArray implements Pilha {
     }
 
     //POP PRETO
-    public Object poppreto()throws PilhaVaziaExcecao {
+    public Object poppreto()throws PilhaVaziaExcecao{
         if(ultimopre == a.length)
             throw new PilhaVaziaExcecao("A Pilha está vazia");
 
@@ -108,7 +108,7 @@ public class PilhaArray implements Pilha {
     }
 
     //POP
-    public Object pop()throws PilhaVaziaExcecao {
+    public Object pop()throws PilhaVaziaExcecao{
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
 
@@ -117,7 +117,7 @@ public class PilhaArray implements Pilha {
     }
 
     //TOP
-    public Object top()throws PilhaVaziaExcecao {
+    public Object top()throws PilhaVaziaExcecao{
         if(isEmpty())
             throw new PilhaVaziaExcecao("A Pilha está vazia");
         return a[t];
