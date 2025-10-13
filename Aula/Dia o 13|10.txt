@@ -1,0 +1,18 @@
+Vetor
+  size() | O(1)
+  isEmpty() | O(1)
+  elemAtRank() | O(1)
+  replaceAtRank() | O(1)
+  insertAtRank(r, f) | O(n)
+  removeAtRank(r) | O(n)
+
+
+  Aplicação
+    *Diretas: banco de dados elementar("ordenaos")
+    *
+
+  Baseada em array
+    *array V de tamanho N
+    *variavel n mantém o tamanho do vetor
+    *a operação elemAtRank(r) é implementada em tempo 0(1) para retornar V[r]
+    *espaço máximo é limitado pela array mas o vetor poder parar antes do máximo da array
