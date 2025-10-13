@@ -1,3 +1,4 @@
+/*
 public void pushvermelho(Object o){
     if(t==(a.length)-1 || t==ultimopre-1){
         if(FC==0)
@@ -11,3 +12,4 @@ public void pushvermelho(Object o){
     }
     a[++t]=o;
 }
+*/

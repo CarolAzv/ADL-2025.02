@@ -6,7 +6,6 @@ public class PilhaArray implements Pilha{
     private int ultimopre;
     public PilhaArray(int capacidade, int crescimento){
         ultimopre = capacidade;
-        this.capacidade=capacidade;
         t=-1;
         FC=crescimento;
         if (crescimento<=0)

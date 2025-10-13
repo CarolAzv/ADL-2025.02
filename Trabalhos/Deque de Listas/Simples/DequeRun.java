@@ -8,15 +8,18 @@ public class DequeRun {
             dq.enqueue(Integer.valueOf(f));
         }
         
-        /*
-        * System.out.println("Mostrando deque:");
-        * // deque.showDeque(); IMPLEMENTAR
-        *   
-        *System.out.println("Removendo elementos do deque:");
-        *for (int f = 0; f < 5; f++) {
-        *    System.out.print("Removendo da frente: ");
-        *    // System.out.println(deque.removeFront()); IMPLEMENTAR
-        *}
-        */
+        System.out.println("Mostrando deque:");
+        if(dq.isEmpty())
+            throw new EFilaVazia("O deque está vazio");
+        System.out.print("Itens da pilha: ");
+        for (int i = 0; i < dq.size(); i++) {
+            System.out.print(dq.get(i) + " ");
+        }
+  
+        System.out.println("Removendo elementos do deque:");
+        for (int f = 0; f < 5; f++) {
+            System.out.print("Removendo elemento: ");
+            System.out.println(dq.denqueue());
+        }
     }
 }
