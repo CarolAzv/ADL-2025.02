@@ -27,10 +27,9 @@ public class DequeLista implements Deque{
         a[f]=o;
         f=f+1;
         if(f>capacidade)
+            f=0;
             if(i==0)
                 throw new EFilaCheia("O deque está cheio");
-            else
-                f=0;
         else if(f==i)
             throw new EFilaCheia("O deque está cheio");
     }
