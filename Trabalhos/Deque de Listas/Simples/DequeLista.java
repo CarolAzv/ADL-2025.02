@@ -4,8 +4,8 @@ public class DequeLista implements Deque{
     private int i;
     private int f;
     public DequeLista(int capacidade){
-        f=i+1;
         i=0;
+        f=i;
         a=new Object[capacidade];
     }
 
@@ -24,10 +24,15 @@ public class DequeLista implements Deque{
     }
 
     public void enqueue(Object o){
-        if(capacidade-1==size())
-            throw new EFilaVazia("O deque está vazio");
         a[f]=o;
-        f=(f+1)%capacidade;
+        f=f+1;
+        if(f>capacidade)
+            if(i==0)
+                throw new EFilaCheia("O deque está cheio");
+            else
+                f=0;
+        else if(f==i)
+            throw new EFilaCheia("O deque está cheio");
     }
 
     public Object denqueue(Object o){

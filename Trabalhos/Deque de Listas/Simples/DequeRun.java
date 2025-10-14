@@ -3,7 +3,7 @@ public class DequeRun {
         DequeLista dq = new DequeLista(10);
 
         System.out.println("Inserindo elementos no deque:");
-        for(int p=0; p<10; p++){
+        for(int p=0; p<9; p++){
             System.out.println("Inserindo "+p);
             dq.enqueue(Integer.valueOf(p));
         }
