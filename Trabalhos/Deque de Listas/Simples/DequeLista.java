@@ -1,34 +1,43 @@
 public class DequeLista implements Deque{
-    private int capacidade;
+    private int c; //capacidade
     private Object[] a;
     private int i;
     private int f;
     public DequeLista(int capacidade){
         i=0;
         f=i;
+        c=capacidade;
         a=new Object[capacidade];
     }
 
     public int size(){
-        return (capacidade-i+f)%capacidade;
+        return (c-i+f)%c;
     }
 
     public boolean isEmpty(){
-        return size()==1;
+        if(size()==0)
+            return true;
+        return false;
     }
 
-    public Object first() throws EFilaVazia{
+    public int first(){
         if(isEmpty())
             throw new EFilaVazia("O deque está vazio");
-        return a[i];
+        return i;
+    }
+
+    public int last(){
+        if(isEmpty())
+            throw new EFilaVazia("O deque está vazio");
+        return f;
     }
 
     public void enqueue(Object o){
         a[f]=o;
-        f=f+1;
-        if(f>capacidade)
+        f++;
+        if(f>c)
             f=0;
-            if(i==0)
+            if(f==i)
                 throw new EFilaCheia("O deque está cheio");
         else if(f==i)
             throw new EFilaCheia("O deque está cheio");
@@ -38,7 +47,9 @@ public class DequeLista implements Deque{
         if(isEmpty())
             throw new EFilaVazia("O deque está vazio");
         o=a[i];
-        i=(i+1)%capacidade;
+        i++;
+        if(i>c)
+            i=0;
         return o;
     }
 

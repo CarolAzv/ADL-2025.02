@@ -3,7 +3,7 @@ public class DequeRun {
         DequeLista dq = new DequeLista(10);
 
         System.out.println("Inserindo elementos no deque:");
-        for(int p=0; p<9; p++){
+        for(int p=10; p<19; p++){
             System.out.println("Inserindo "+p);
             dq.enqueue(Integer.valueOf(p));
         }
@@ -26,7 +26,7 @@ public class DequeRun {
         if(dq.isEmpty())
             throw new EFilaVazia("O deque está vazio");
         System.out.print("Itens da pilha: ");
-        for(int i = 0; i < dq.size(); i++) {
+        for(int i=dq.first(); i<dq.last(); i++) {
             System.out.print(dq.get(i) + " ");
         }
     }
