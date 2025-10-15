@@ -3,8 +3,8 @@ public interface Duplo{
     public boolean isEmpty();
     public int first() throws EDequeVazia;
     public int last() throws EDequeVazia; 
-    public Object inserirInicio(object):
-     object removerInicio():
-    public Object inserirFim(object):
-     object removerFim():
+    public Object inStart(Object o);
+    public Object removeStart();
+    public Object inEnd(Object o);
+    public Object removeEnd();
 }
