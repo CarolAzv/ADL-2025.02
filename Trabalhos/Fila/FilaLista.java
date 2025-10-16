@@ -3,6 +3,7 @@ public class FilaLista implements Fila{
     private Object[] a;
     private int i;
     private int f;
+    
     public FilaLista(int capacidade){
         i=0;
         f=i;

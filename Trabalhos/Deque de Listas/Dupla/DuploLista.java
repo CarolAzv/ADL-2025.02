@@ -1,4 +1,4 @@
-public class DuploLista implements Duplo{
+/*public class DuploLista implements Duplo{
     private int c; //capacidade
     private Object[] a;
     private int i;
@@ -42,3 +42,4 @@ public class DuploLista implements Duplo{
 
     public Object removeEnd(){}
 }
+*/
