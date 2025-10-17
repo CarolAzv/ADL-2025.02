@@ -18,7 +18,7 @@ public class SimplesLista implements No{
     }
 
     public void setElemento(Object o){
-        elemento = o;
+        this.elemento = o;
     }
 
     public void setProximo(Object o){

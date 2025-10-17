@@ -7,8 +7,6 @@ public class SimplesRun{
         for(int p=0; p<10; p++){
             System.out.println("Inserindo "+p);
             while(a.getProximo()!=null){
-                if( a.getProximo()==null)
-                    break;
                 a = a.getProximo();
             }
             a.setProximo(p);
