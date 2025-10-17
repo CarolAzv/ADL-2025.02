@@ -13,7 +13,7 @@ public class SimplesLista implements No{
 
     public No getProximo(){
         if(proximo==null)
-            return getElemento()
+            return null;
         return proximo;
     }
 
