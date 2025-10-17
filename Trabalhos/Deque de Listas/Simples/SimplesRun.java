@@ -2,6 +2,7 @@ public class SimplesRun{
     private static No a;
     public static void main(String[] args){
         SimplesLista no = new SimplesLista("Start");
+        no.setProximo("End");
         System.out.println("Criando deque:");
         a = no.getProximo();
         for(int p=0; p<10; p++){

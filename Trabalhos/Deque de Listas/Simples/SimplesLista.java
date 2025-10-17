@@ -22,6 +22,6 @@ public class SimplesLista implements No{
     }
 
     public void setProximo(Object o){
-        proximo = new SimplesLista(o);  
+        this.proximo = new SimplesLista(o);  
     }
 }
