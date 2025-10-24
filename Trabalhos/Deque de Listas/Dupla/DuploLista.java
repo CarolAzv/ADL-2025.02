@@ -1,45 +1,39 @@
-/*public class DuploLista implements Duplo{
-    private int c; //capacidade
-    private Object[] a;
-    private int i;
-    private int f;
-    public DuploLista(int capacidade){
-        i=0;
-        f=i;
-        c=capacidade;
-        a=new Object[capacidade];
+public class DuploLista implements No{
+    private Object elemento;
+    private No proximo;
+    private No anterior;
+
+    public DuploLista(Object o){
+        elemento = o;
+        proximo = null;
+        anterior = "?";
     }
 
-    public int size(){
-        return (c-i+f)%c;
+    public Object getElemento(){
+        return elemento;
     }
 
-    public boolean isEmpty(){
-        if(size()==0)
-            return true;
-        return false;
+    public No getProximo(){
+        if(proximo==null)
+            return null;
+        return proximo;
+    }
+    
+    public No getAnterior(){
+        if(proximo==null)
+            return null;
+        return proximo;
     }
 
-    public int first(){
-        if(isEmpty())
-            throw new EDequeVazia("O deque está vazio");
-        return i;
+    public void setElemento(Object o){
+        this.elemento = o;
     }
 
-    public int last(){
-        if(isEmpty())
-            throw new EDequeVazia("O deque está vazio");
-        return f;
+    public void setProximo(Object o){
+        this.proximo = new SimplesLista(o);  
     }
 
-    public Object inStart(Object o){
-        
+    public void setAnterior(Object o){
+        this.proximo = new SimplesLista(o);  
     }
-
-    public Object removeStart(){}
-
-    public Object inEnd(Object o){}
-
-    public Object removeEnd(){}
 }
-*/
