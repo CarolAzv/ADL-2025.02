@@ -1,0 +1,48 @@
+Estrutura de Dados Árvore
+  Estrutura hierraquica de "Mãe" e "Filho"
+  Mais rápidas porem mais dificeis de aplicar
+
+  "Raiz" é o unico nó sem mãe/ É a mãe
+  "Nó Interno" tem pelo menos um filho
+  "Nó Externo" ou "Nó Folha" não tem filho
+
+  Ancestral de um nó: pai, avô, bisavô, etc.
+  Profundidade de um nó é defenido peço número de ancestrais (aponta pra cima)
+  Altura de um árvore é o quantos no demora para chegar no mais distante "nó folha" (max é raiz a folha) (aponta pra baixo)
+  Sub-árvore: árvore formada por um nó e seus descendentes
+
+Métodos genéricos:
+  *integer size()
+      *retorna o número de nós da árvore
+  *integer height()
+      *Retorna a altura
+  *boolean isEmpty()
+      *indica se a árvore é vazia
+  *Iterator elements()
+      *retorna um iterador para os elementos da árvore
+  *Iterator nos()
+      *retorna um iterador para os nós da árvore
+
+Métodos de acesso:
+  *No root()
+      *retorna o nó raiz
+  *No parent(No)
+      *retorna o nó pai de um nó
+  *Iterator children(No)
+      *retorna um iterador para os filhos de um nó
+
+Métodos de consulta:
+  *boolean isInternal(No)
+      *Verifica se o Nó é interno
+  *boolean isExternal(No)
+      *Verifica se o Nó é externo ou folha
+  *boolean isRoot(No)
+      *Verifica se o Nó é Raiz
+  *integer depth(No)
+      *Retorna a profundidade de um No
+
+Métodos de atualização:
+  *Object replace(No, o)
+      *Altera o objeto armazenado em um Nó
+
+Métodos adicionais podem ser definidos pela estrutura que extende/implementa o TAD árvore
