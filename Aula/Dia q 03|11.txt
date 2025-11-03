@@ -1,1 +1,11 @@
+Árvore Binária
+    *Cada nó tem, no máximo, 2 filhos
+        *propria é quando todos nós tem 0 ou 2 filhos
+    *Filhos são um par ordenado
 
+
+Áevore de Decisão
+    Ex.
+          Jantar?
+      sim v      não v
+        Come        Não come
