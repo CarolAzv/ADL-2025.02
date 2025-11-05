@@ -1,0 +1,10 @@
+Árvore Binaria
+    algoritmo inOrder(v)
+        se (isInternal (v))
+            inOrder(leftChild(v))
+        visite(v)
+        se (isInternal(v))
+            inOrder(rightChild(v))
+
+*x(v) = colocação de v
+*y(v) = profundidade de v
