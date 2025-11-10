@@ -1,0 +1,6 @@
+Uma arvore binaria pote ter a aparencia de um array
+      1      {1, 2, 3}
+    2   3
+Nesse formato, o pai vem seguido de seus filhos em ordem
+Nesse caso vc pode fazer isso para identificar onde estar os filhos de um nó
+  i F.E de nó = i*2(filho esquerdo) e i*2+1(filho direito) 
