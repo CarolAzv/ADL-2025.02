@@ -4,3 +4,9 @@ Uma arvore binaria pote ter a aparencia de um array
 Nesse formato, o pai vem seguido de seus filhos em ordem
 Nesse caso vc pode fazer isso para identificar onde estar os filhos de um nó
   i F.E de nó = i*2(filho esquerdo) e i*2+1(filho direito) 
+
+
+Arvore de Pesquisa
+      Posuim uma ordem espesifica para organizar nos
+            Qualquer no pego é "v" nós a esqueda são "u" e nós a direita são "w"
+            u < v < w (U é menor que V e W é maior que V)
