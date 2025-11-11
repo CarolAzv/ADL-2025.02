@@ -1,7 +1,6 @@
 public class InicioLista implements NoInicio{
     private Object elemento;
     private No proximo;
-    private No anterior;
 
     public InicioLista(Object o){
         elemento = o;
@@ -25,4 +24,5 @@ public class InicioLista implements NoInicio{
     public void setProximo(Object o){
         this.proximo = new No(o);  
     }
+
 }
