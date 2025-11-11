@@ -1,0 +1,28 @@
+public class InicioLista implements NoInicio{
+    private Object elemento;
+    private No proximo;
+    private No anterior;
+
+    public InicioLista(Object o){
+        elemento = o;
+        proximo = null;
+    }
+
+    public Object getProximo(){
+        if(proximo==null)
+            return null;
+        return proximo;
+    }
+
+    public Object getElemento(){
+        return elemento;
+    }
+
+    public void setElemento(Object o){
+        this.elemento = o;
+    }
+
+    public void setProximo(Object o){
+        this.proximo = new No(o);  
+    }
+}
