@@ -6,23 +6,35 @@ public class ListaLista implements No{
     public ListaLista(Object o){
         elemento = o;
         proximo = null;
-    }
-
-    public Object getElemento(){
-        return elemento;
-    }
-
-    public No getProximo(){
-        if(proximo==null)
-            return null;
-        return proximo;
+        anterior = null;
     }
 
     public void setElemento(Object o){
         this.elemento = o;
     }
 
+    public Object getElemento(){
+        return elemento;
+    }
+
     public void setProximo(Object o){
         this.proximo = new SimplesLista(o);  
     }
+
+    public Object getProximo(){
+        if(proximo==null)
+            return null;
+        return proximo;
+    }
+
+    public void setAnterior(Object o){
+        this.anterior = new SimplesLista(o);  
+    }
+
+    public Object getAnterior(){
+        if(anterior==null)
+            return null;
+        return anterior;
+    }
+
 }
