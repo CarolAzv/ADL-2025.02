@@ -1,6 +1,6 @@
-public class SimplesLista implements No{
+public class SimplesLista{
     private Object elemento;
-    private No proximo;
+    private Object proximo;
 
     public SimplesLista(Object o){
         elemento = o;
@@ -11,7 +11,7 @@ public class SimplesLista implements No{
         return elemento;
     }
 
-    public No getProximo(){
+    public Object getProximo(){
         if(proximo==null)
             return null;
         return proximo;
@@ -22,6 +22,6 @@ public class SimplesLista implements No{
     }
 
     public void setProximo(Object o){
-        this.proximo = new SimplesLista(o);  
+        this.proximo = o;  
     }
 }

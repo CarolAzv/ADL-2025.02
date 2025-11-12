@@ -1,10 +1,10 @@
 public class SimplesRun{
-    private static No a;
+    private static Object a;
     public static void main(String[] args){
-        SimplesLista no = new SimplesLista("Start");
-        no.setProximo("End");
+        SimplesLista Object = new SimplesLista("Start");
+        Object.setProximo("End");
         System.out.println("Criando deque:");
-        a = no.getProximo();
+        a = Object.getProximo();
         for(int p=0; p<10; p++){
             System.out.println("Inserindo "+p);
             while(a.getProximo()!=null){

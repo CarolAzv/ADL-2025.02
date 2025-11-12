@@ -1,9 +1,9 @@
-public class ListaLista implements No{
+public class NoLista implements No{
     private Object elemento;
-    private No proximo;
-    private No anterior;
+    private Object proximo;
+    private Object anterior;
 
-    public ListaLista(Object o){
+    public NoLista(Object o){
         elemento = o;
         proximo = null;
         anterior = null;
@@ -18,7 +18,7 @@ public class ListaLista implements No{
     }
 
     public void setProximo(Object o){
-        this.proximo = new SimplesLista(o);  
+        this.proximo = o;  
     }
 
     public Object getProximo(){
@@ -28,7 +28,7 @@ public class ListaLista implements No{
     }
 
     public void setAnterior(Object o){
-        this.anterior = new SimplesLista(o);  
+        this.anterior = o;  
     }
 
     public Object getAnterior(){

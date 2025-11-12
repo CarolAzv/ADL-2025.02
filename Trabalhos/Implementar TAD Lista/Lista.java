@@ -3,8 +3,8 @@ public interface Lista{
     public int size();
     public boolean isEmpty();
     //fila
-    public boolean isFirst(Object n) throws EDequeVazia;
-    public boolean isLast(Object n) throws EDequeVazia;
+    public boolean isFirst(Object n) throws ESequenciaVazia;
+    public boolean isLast(Object n) throws ESequenciaVazia;
     //acessar
     public Object first();
     public Object last();

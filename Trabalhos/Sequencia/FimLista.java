@@ -22,6 +22,6 @@ public class FimLista implements NoFim{
     }
 
     public void setAnterior(Object o){
-        this.anterior = new SimplesLista(o);  
+        this.anterior = o;  
     }
 }
