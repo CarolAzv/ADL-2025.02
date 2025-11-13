@@ -8,6 +8,15 @@ public class ListaRun{
     s.setProximo(f);
     f.setAnterior(s);
 
+    System.out.println("Lista: ");
+    while(Object!=f){
+            s.
+            System.out.println("Lista "+p);
+            while(a.getProximo()!=null){
+                a = a.getProximo();
+            }
+            a.setProximo(p);
+        }
     
 
     /*
