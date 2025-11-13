@@ -3,20 +3,24 @@ public class ListaRun{
   private static NoInicio s;
   private static NoFim f;
   public static void main(String[] args){
+    public object temp;
     s = new InicioLista("Começo");
     f = new FimLista("Fim");
     s.setProximo(f);
     f.setAnterior(s);
 
     System.out.println("Lista: ");
-    while(Object!=f){
-            s.
-            System.out.println("Lista "+p);
-            while(a.getProximo()!=null){
-                a = a.getProximo();
-            }
-            a.setProximo(p);
+    temp = s.getProximo()
+    while(temp!=f){
+            System.out.println(temp + " ");
+            temp = temp.getProximo()
         }
+    System.out.println(temp + " ");
+
+    System.out.println("Adiconando 'Cachorro' ");
+    f.
+    
+    System.out.println("Adiconando 'Gato' ");
     
 
     /*
