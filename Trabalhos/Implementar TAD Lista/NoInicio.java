@@ -20,8 +20,9 @@ public class NoInicio{
     }
 
     public Object getProximo(){
-        if(proximo==null)
+        if(this.proximo==null)
             return null;
         return proximo;
     }
+
 }
