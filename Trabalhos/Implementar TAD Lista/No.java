@@ -1,9 +1,9 @@
-public class NoLista implements No{
+public class No implements No{
     private Object elemento;
     private Object proximo;
     private Object anterior;
 
-    public NoLista(Object o){
+    public No(Object o){
         elemento = o;
         proximo = null;
         anterior = null;
@@ -38,3 +38,4 @@ public class NoLista implements No{
     }
 
 }
+
